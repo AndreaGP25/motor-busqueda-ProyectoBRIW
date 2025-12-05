@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BuscaBien - Tu buscador inteligente</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header class="top-bar">
+        <div class="brand-container">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+            <span class="brand-name">BuscaBien</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-box" id="main-box">
+        <h1>¿Qué quieres encontrar hoy?</h1>
+        <form action="/search" method="get" id="search-form">
+            <div class="search-container">
+                <input type="text" name="q" value="{{ query if query }}" placeholder="Escribe tu búsqueda aquí..." autocomplete="off" id="search-input">
+            </div>
+            
+            <div class="controls">
+                <input type="submit" value="Buscar" id="btn-search">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" name="semantica" {% if semantica %}checked{% endif %}>
+                    <span class="checkmark"></span>
+                    <span class="label-text">Búsqueda Semántica</span>
+                </label>
+            </div>  
+        </form>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+    </main>
+
+    <footer class="bottom-bar">
+        <p>Proyecto Final • BRIW 2025</p>
+        <p class="credits">Elaborado por: <b>Andrea Góngora</b>, <b>Mariana Caballero</b> y <b>Cristina Villanueva</b></p>
+    </footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
