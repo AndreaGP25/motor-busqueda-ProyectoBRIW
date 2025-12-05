@@ -1,9 +1,9 @@
-# 🔍 Motor de Búsqueda en Español
+# Motor de Búsqueda en Español
 Sistema completo de búsqueda y recuperación de información en español con todas las funcionalidades de un motor de búsqueda moderno.
 
-## ✨ Características
+## Características
 
-### ✅ Funcionalidades Principales
+### Funcionalidades Principales
 - **Crawling inteligente** de páginas HTML
 - **Preprocesamiento especializado** para español (stemming, stopwords, acentos)
 - **Búsqueda booleana** (AND, OR, NOT)
@@ -14,13 +14,13 @@ Sistema completo de búsqueda y recuperación de información en español con to
 - **Resultados con snippets** y highlighting
 - **Expansión semántica** mediante sinónimos en español
 
-### 🎨 Interfaz de Usuario
+### Interfaz de Usuario
 - Diseño responsive y moderno
 - Visualización de scores de relevancia
 - Paginación de resultados
 - Filtros interactivos
 
-## 🚀 Instalación Rápida
+## Instalación Rápida
 
 ### 1. Prerrequisitos
 ```bash
